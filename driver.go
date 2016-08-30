@@ -7,8 +7,8 @@
 package godb2
 
 import (
-	"github.com/sebastienboisard/godb2/api"
 	"database/sql"
+	"github.com/tianlin/godb2/api"
 )
 
 var drv Driver

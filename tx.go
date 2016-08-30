@@ -5,9 +5,9 @@
 package godb2
 
 import (
-	"github.com/sebastienboisard/godb2/api"
 	"database/sql/driver"
 	"errors"
+	"github.com/tianlin/godb2/api"
 )
 
 type Tx struct {

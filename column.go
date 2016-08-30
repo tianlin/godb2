@@ -5,10 +5,10 @@
 package godb2
 
 import (
-	"github.com/sebastienboisard/godb2/api"
 	"database/sql/driver"
 	"errors"
 	"fmt"
+	"github.com/tianlin/godb2/api"
 	"time"
 	"unsafe"
 )
@@ -170,7 +170,7 @@ func NewBindableColumn(b *BaseColumn, ctype api.SQLSMALLINT, bufSize int) *Binda
 	l := 8 // always use small starting buffer
 	if c.Size > l {
 		l = c.Size
- 	}
+	}
 	c.Buffer = make([]byte, l)
 
 	return c

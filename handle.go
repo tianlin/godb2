@@ -5,8 +5,8 @@
 package godb2
 
 import (
-	"github.com/sebastienboisard/godb2/api"
 	"fmt"
+	"github.com/tianlin/godb2/api"
 )
 
 func ToHandleAndType(handle interface{}) (h api.SQLHANDLE, ht api.SQLSMALLINT) {

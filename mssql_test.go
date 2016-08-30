@@ -16,7 +16,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sebastienboisard/godb2/api"
+	"github.com/tianlin/godb2/api"
 )
 
 var (

@@ -5,8 +5,8 @@
 package godb2
 
 import (
-	"github.com/sebastienboisard/godb2/api"
 	"database/sql/driver"
+	"github.com/tianlin/godb2/api"
 	"unsafe"
 )
 
@@ -32,6 +32,14 @@ func (d *Driver) Open(dsn string) (driver.Conn, error) {
 		defer releaseHandle(h)
 		return nil, NewError("SQLDriverConnect", h)
 	}
+
+	ret = api.SQLSetConnectAttr(h, api.SQL_ATTR_LONGDATA_COMPAT,
+		api.SQLPOINTER(api.SQL_LD_COMPAT_YES), api.SQL_IS_UINTEGER)
+	if IsError(ret) {
+		defer releaseHandle(h)
+		return nil, NewError("SQLSetConnectAttr", h)
+	}
+
 	return &Conn{h: h}, nil
 }
 

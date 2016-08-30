@@ -93,6 +93,9 @@ const (
 
 	SQL_IS_UINTEGER = -5
 
+	SQL_LONGDATA_COMPAT = 1253
+	SQL_LD_COMPAT_YES   = 1
+
 	//Connection pooling
 	SQL_ATTR_CONNECTION_POOLING = 201
 	SQL_ATTR_CP_MATCH           = 202
